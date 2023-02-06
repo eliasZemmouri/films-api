@@ -1,0 +1,26 @@
+
+
+### Read All films
+GET http://localhost:8080/films
+
+### Create One film
+POST http://localhost:8080/films
+Content-Type: application/json
+
+{
+  "title" : "Venom: Let There Be Carnage",
+  "duration" : 97,
+  "budget" : 110,
+  "link" : "https://en.wikipedia.org/wiki/Venom:_Let_There_Be_Carnage"
+}
+
+### Update One film
+PUT http://localhost:8080/films/4
+Content-Type: application/json
+
+{
+  "title" : "Venom: Let There Be Carnage",
+  "duration" : 97,
+  "budget" : 110,
+  "link" : "https://en.wikipedia.org/wiki/Venom:_Let_There_Be_Carnage"
+}
