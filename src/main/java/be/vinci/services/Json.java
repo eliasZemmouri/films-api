@@ -14,11 +14,13 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import be.vinci.domain.Film;
-import java.io.ObjectInputFilter.Config;
+import be.vinci.utils.Config;
 
 public class Json<T> {
-
-    private static final String DB_FILE_PATH = ObjectInputFilter.Config.getProperty("DatabaseFilePath");
+    static{
+        Config.load("dev.properties");
+    }
+    private static final String DB_FILE_PATH = Config.getProperty("DatabaseFilePath");
     private static Path pathToDb = Paths.get(DB_FILE_PATH);
     private final static ObjectMapper jsonMapper = new ObjectMapper();
     private Class<T> type ;
