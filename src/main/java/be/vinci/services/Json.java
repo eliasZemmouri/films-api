@@ -17,9 +17,7 @@ import be.vinci.domain.Film;
 import be.vinci.utils.Config;
 
 public class Json<T> {
-    static{
-        Config.load("dev.properties");
-    }
+
     private static final String DB_FILE_PATH = Config.getProperty("DatabaseFilePath");
     private static Path pathToDb = Paths.get(DB_FILE_PATH);
     private final static ObjectMapper jsonMapper = new ObjectMapper();

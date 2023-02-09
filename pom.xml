@@ -4,10 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>be.vinci</groupId>
-    <artifactId>films-api</artifactId>
+    <artifactId>exercises2.1</artifactId>
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>films-api</name>
+    <name>headless-cms</name>
 
     <dependencyManagement>
         <dependencies>
@@ -27,14 +27,29 @@
             <artifactId>jersey-container-grizzly2-http</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-json-jackson</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.glassfish.jersey.inject</groupId>
             <artifactId>jersey-hk2</artifactId>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-text</artifactId>
-            <version>1.9</version>
+            <version>1.10.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>4.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mindrot</groupId>
+            <artifactId>jbcrypt</artifactId>
+            <version>0.4</version>
+        </dependency>
+
 
         <!-- uncomment this to get JSON support:
          <dependency>
@@ -48,22 +63,6 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.glassfish.jersey.media</groupId>
-            <artifactId>jersey-media-json-jackson</artifactId>
-            <version>3.1.1</version>
-        </dependency>
-        <dependency>
-            <groupId>user.java.io</groupId>
-            <artifactId>user.java.io</artifactId>
-            <version>2020.134.36653</version>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.11.3</version>
-        </dependency>
-
     </dependencies>
 
     <build>
@@ -90,7 +89,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>be.vinci.main.Main</mainClass>
+                    <mainClass>be.be.vinci.be.vinci.be.vinci.api.be.Main</mainClass>
                 </configuration>
             </plugin>
         </plugins>
@@ -100,11 +99,4 @@
         <jersey.version>3.1.0-M8</jersey.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    <repositories>
-        <repository>
-            <id>clojars</id>
-            <name>Clojars</name>
-            <url>https://repo.clojars.org/</url>
-        </repository>
-    </repositories>
 </project>
